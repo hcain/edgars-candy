@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import humanizeDuration from 'humanize-duration';
-import './app.css';
+import './app.scss';
 import TrophyList from './TrophyList';
 
 export default function App() {
@@ -26,9 +26,11 @@ export default function App() {
       {user ? (
         <div>
           <h1>{`${user.firstName}'s Trophies!`}</h1>
-          <p>{`You've read ${user.stories} stories in ${humanizeDuration(
-            user.time
-          )}`}</p>
+          <p>
+            {`You've read ${user.stories} stories in ${humanizeDuration(
+              user.time
+            )}`}
+          </p>
           <TrophyList trophies={user.trophies} />
         </div>
       ) : (
