@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "firstName": "Dante",
+        "lastName": "Alighieri",
+        "username": "dante.alighieri",
+        "email": "dante@divinecomedy.com",
+        "trophies": {
+          "tenStories": "true",
+          "twentyStories": "false",
+          "oneHour": "false"
+          },
+        "stories": 12,
+        "time": 45
+    }
+]
