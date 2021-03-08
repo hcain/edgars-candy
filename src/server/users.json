@@ -5,12 +5,26 @@
         "lastName": "Alighieri",
         "username": "dante.alighieri",
         "email": "dante@divinecomedy.com",
-        "trophies": {
-          "tenStories": "true",
-          "twentyStories": "false",
-          "oneHour": "false"
-          },
+        "trophies": 
+          [
+            {
+              "name": "Ten Stories", 
+              "earned": "true",
+              "date": 1615240548709, 
+              "description": "Read 10 stories."
+            }, 
+            {
+              "name": "Twenty Stories", 
+              "earned": "false", 
+              "description": "Read 20 stories."
+            }, 
+            {
+              "name":"One Hour", 
+              "earned":"false", 
+              "description": "Read for 1 hour."
+            }
+          ],
         "stories": 12,
-        "time": 45
+        "time":  	2700000
     }
 ]
