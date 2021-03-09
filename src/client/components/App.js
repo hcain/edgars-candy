@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import humanizeDuration from 'humanize-duration';
-import './app.scss';
+import '../scss/resetStyles.scss';
+import '../scss/app.scss';
 import TrophyList from './TrophyList';
+import Header from './Header';
 
 export default function App() {
   const [user, setUser] = useState();
@@ -25,12 +26,7 @@ export default function App() {
     <div>
       {user ? (
         <div>
-          <h1>{`${user.firstName}'s Trophies!`}</h1>
-          <p>
-            {`You've read ${user.stories} stories in ${humanizeDuration(
-              user.time
-            )}`}
-          </p>
+          <Header user={user} />
           <TrophyList trophies={user.trophies} />
         </div>
       ) : (

@@ -17,11 +17,41 @@
               "name": "Twenty Stories", 
               "earned": "false", 
               "description": "Read 20 stories."
+            },
+            {
+              "name":"Thirty Stories", 
+              "earned":"false", 
+              "description": "Read 30 stories."
             }, 
             {
-              "name":"One Hour", 
+              "name":"One Hour Total", 
               "earned":"false", 
-              "description": "Read for 1 hour."
+              "description": "Read for a combined total of 1 hour."
+            },
+            {
+              "name":"Two Hours Total", 
+              "earned":"false", 
+              "description": "Read for a combined total of 2 hours."
+            }, 
+            {
+              "name":"Thirty Minutes", 
+              "earned":"false", 
+              "description": "Read for over 30 minutes in one session."
+            },            
+            {
+              "name":"Forty-five Minutes", 
+              "earned":"false", 
+              "description": "Read for Read for over 45 minutes in one session."
+            }, 
+            {
+              "name":"Three Genres", 
+              "earned":"false", 
+              "description": "Read stories from 3 different genres."
+            }, 
+            {
+              "name":"One hundred pages", 
+              "earned":"false", 
+              "description": "Read 100 pages."
             }
           ],
         "stories": 12,
