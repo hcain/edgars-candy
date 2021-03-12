@@ -23,12 +23,19 @@ module.exports = {
         test: /\.(scss|css)$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      // {
+      //   test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+      //   loader: 'url-loader',
+      //   options: {
+      //     limit: 100000,
+      //   },
+      // },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-        loader: 'url-loader',
-        options: {
-          limit: 100000,
-        },
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          'file-loader?name=[name].[ext]&publicPath=./&outputPath=./svg/',
+          'image-webpack-loader',
+        ],
       },
     ],
   },

@@ -1,57 +1,76 @@
 [
     {
         "id": 1,
-        "firstName": "Dante",
-        "lastName": "Alighieri",
-        "username": "dante.alighieri",
-        "email": "dante@divinecomedy.com",
+        "firstName": "Edgar",
+        "lastName": "Allan Poe",
+        "username": "edgar.allan.poe",
+        "email": "poe@nevermore.com",
         "trophies": 
           [
             {
-              "name": "Ten Stories", 
-              "earned": "true",
-              "date": 1615240548709, 
-              "description": "Read 10 stories."
+              "name": "Ten Tootsie Rolls",
+              "number": "001",
+              "earned": true,
+              "date": "2021-03-10T15:31:00Z", 
+              "description": "Read 10 stories.",
+              "icon": "001.svg"
             }, 
             {
-              "name": "Twenty Stories", 
-              "earned": "false", 
-              "description": "Read 20 stories."
+              "name": "Copius Candy Corn",
+              "number": "002",
+              "earned": false, 
+              "description": "Read 20 stories.",
+              "icon": "002.svg"
             },
             {
-              "name":"Thirty Stories", 
-              "earned":"false", 
-              "description": "Read 30 stories."
+              "name":"Oodles of Gummy Worms",
+              "number": "003",
+              "earned":false, 
+              "description": "Read 30 stories.",
+              "icon": "003.svg"
             }, 
             {
-              "name":"One Hour Total", 
-              "earned":"false", 
-              "description": "Read for a combined total of 1 hour."
+              "name":"Bunch of Butterscotches",
+              "number": "004",
+              "earned":false, 
+              "description": "Read for a combined total of 1 hour.",
+              "icon": "004.svg"
             },
             {
-              "name":"Two Hours Total", 
-              "earned":"false", 
-              "description": "Read for a combined total of 2 hours."
+              "name":"Plenty of Peppermints", 
+              "number": "005",
+              "earned":false, 
+              "description": "Read for a combined total of 2 hours.",
+              "icon": "005.svg"
             }, 
             {
-              "name":"Thirty Minutes", 
-              "earned":"false", 
-              "description": "Read for over 30 minutes in one session."
+              "name":"Handful of Hard Candies", 
+              "number": "006",
+              "earned":true,
+              "date": "2021-03-09T22:11:00Z",
+              "description": "Read for over 30 minutes in one session.",
+              "icon": "006.svg"
             },            
             {
-              "name":"Forty-five Minutes", 
-              "earned":"false", 
-              "description": "Read for Read for over 45 minutes in one session."
+              "name":"Lots of Lollipops",
+              "number": "007",
+              "earned":false, 
+              "description": "Read for Read for over 45 minutes in one session.",
+              "icon": "007.svg"
             }, 
             {
-              "name":"Three Genres", 
-              "earned":"false", 
-              "description": "Read stories from 3 different genres."
+              "name":"Heaps of Jelly Beans",
+              "number": "008",
+              "earned":false, 
+              "description": "Read stories from 3 different genres.",
+              "icon": "008.svg"
             }, 
             {
-              "name":"One hundred pages", 
-              "earned":"false", 
-              "description": "Read 100 pages."
+              "name":"Big Bowlful of Candy",
+              "number": "009",
+              "earned":false, 
+              "description": "Read 100 pages.",
+              "icon": "009.svg"
             }
           ],
         "stories": 12,

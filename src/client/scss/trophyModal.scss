@@ -1,0 +1,83 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  //  css animation
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #5e32ba;
+  color: #f3f5f9;
+  font-family: 'Oswald';
+  border: 4px solid #5e32ba;
+  border-radius: 30px;
+  height: 350px;
+  width: 800px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    height: 40px;
+    width: 80px;
+    font-family: 'Oswald';
+    font-size: 16px;
+    line-height: 1.1;
+    color: #f3f5f9;
+    background-color: #f25a3c;
+    border: 4px solid #f25a3c;
+    border-radius: 5px;
+
+    &:hover {
+      cursor: pointer;
+      border: 4px solid #ff7f40;
+    }
+  }
+
+  img {
+    width: 40%;
+    max-width: 300px;
+    margin-left: -20px;
+  }
+  .text {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+  h2 {
+    font-size: 48px;
+    padding-bottom: 20px;
+  }
+  p {
+    font-size: 24px;
+    line-height: 1.2;
+    &.description {
+      padding-bottom: 10px;
+    }
+  }
+}

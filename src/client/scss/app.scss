@@ -1,12 +1,39 @@
-body {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Oswald&display=swap');
+html,
+body,
+#root,
+#root > div {
+  height: 100%;
+  @media only screen and (max-width: 896px) {
+    height: auto;
+  }
   margin: 0;
-  padding: 0;
-  background-color: #f5f2ed;
+}
+body {
+  background-color: #130a25;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 30px;
+  width: 100%;
+  font-family: 'Oswald';
 }
 
-// #ff8066 orange
-// #0b0d63 dark blue
-// #ffd15c yellow
-// #ffb700 dark yellow
-// #f5f2ed beige
+// CANDY
+// #ff7f40 orange
+// #f25a3c dark orange
+// #ffdf40 yellow
+// #ffbe40 dark yellow
+// #c68cff purple
+// #aa80ff dark purple
+// #91f2b1 green
+// #52cca3 dark green
+// #f3f5f9 white
+// #e1e6f0 dark white
+// #ccdeff gray
+// #adbfe6 dark gray
+// #4d5e80 black
+// #3d4566 dark black
