@@ -1,15 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import '../scss/resetStyles.scss';
-import '../scss/app.scss';
 import Modal from 'react-modal';
-import TrophyList from './TrophyList';
+import axios from 'axios';
+
 import Header from './Header';
+import TrophyList from './TrophyList';
+import Footer from './Footer';
 import TrophyModal from './TrophyModal';
 
+import '../scss/resetStyles.scss';
+import '../scss/app.scss';
+
+// for webpack
+import PumpkinLollipop from '../svg/002-lollipop.svg';
+// for modal accessibility
 Modal.setAppElement('#root');
 
 const App = () => {
+  // USER LOGIC
   const [user, setUser] = useState();
 
   useEffect(() => {
@@ -22,33 +29,54 @@ const App = () => {
         console.log(error);
       }
     };
-    console.log('purple');
     fetchUsers();
-    // empty array brackets cause it to only run the first timeaxios('/api/getUsers')
+    // empty array brackets cause it to only run the first time
   }, []);
 
+  // MODAL LOGIC
   const [isOpen, setIsOpen] = useState(false);
 
-  const [selectedTrophy, setSelectedTrophy] = useState();
+  const [selectedTrophy, setSelectedTrophy] = useState({});
 
-  function openModal(trophy) {
-    setSelectedTrophy(trophy);
+  const openModal = (trophy, index) => {
+    // pass clicked on trophy to modal
+    setSelectedTrophy({ trophy, index });
+    // open the modal
     setIsOpen(true);
-  }
+  };
 
-  function closeModal() {
+  const closeModal = () => {
     setIsOpen(false);
-  }
+  };
 
-  console.log('trophy', selectedTrophy);
+  // update a trophy to earned = true when the "add trophy" button in the modal is clicked
+  const addTrophy = () => {
+    // update the trophy within the user object
+    setUser({
+      ...user,
+      // update the trophies property
+      trophies: [
+        // dont change the trophies before updated trophy
+        ...user.trophies.slice(0, selectedTrophy.index),
+        // update selected trophy
+        {
+          // rest of trophy properties stay the same
+          ...user.trophies[selectedTrophy.index],
+          // trophy is now earned
+          earned: true,
+          // add date when earned
+          date: new Date().toISOString(),
+        },
+        // don't change the trophies after updated trophy
+        ...user.trophies.slice(selectedTrophy.index + 1),
+      ],
+    });
+    // close the modal
+    closeModal();
+  };
+
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
+    <div className="app">
       {user ? (
         <div className="main">
           <Header user={user} />
@@ -60,12 +88,23 @@ const App = () => {
           />
         </div>
       ) : (
-        <h1>Loading... please wait!</h1>
+        <div className="loading">
+          <div className="firstRow">
+            <h1>Loading</h1>
+            <img
+              src={`./svg/${PumpkinLollipop}`}
+              alt="Jack-O'-Lantern filled with candy"
+            />
+          </div>
+          <h1>please wait!</h1>
+        </div>
       )}
+      <Footer />
       <TrophyModal
         isOpen={isOpen}
         closeModal={closeModal}
-        selectedTrophy={selectedTrophy}
+        selectedTrophy={selectedTrophy.trophy}
+        addTrophy={addTrophy}
       />
     </div>
   );

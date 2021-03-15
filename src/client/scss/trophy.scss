@@ -9,13 +9,8 @@
 
   margin-top: 10px;
 
-  // align-self: flex-end;
   display: flex;
   align-items: center;
-
-  &:first-child {
-    margin-top: 0px;
-  }
 
   &.notEarned {
     opacity: 0.4;
