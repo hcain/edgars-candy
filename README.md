@@ -37,4 +37,8 @@ npm run build
 npm start
 ```
 
-### Built with simple-react-full-stack boilerplate from [https://github.com/crsandeep/simple-react-full-stack](https://github.com/crsandeep/simple-react-full-stack)
+### Built with
+
+Boilerplate: simple-react-full-stack from [https://github.com/crsandeep/simple-react-full-stack](https://github.com/crsandeep/simple-react-full-stack)
+
+Icons: by Freepik from [www.flaticon.com](www.flaticon.com)
