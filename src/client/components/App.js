@@ -51,7 +51,7 @@ const App = () => {
   };
 
   // update a trophy to earned = true when the "add trophy" button in the modal is clicked
-  const addTrophy = () => {
+  const logStudentFinishedReading = () => {
     // update the trophy within the user object
     setUser({
       ...user,
@@ -91,8 +91,8 @@ const App = () => {
           </div>
         ) : (
           <div className="loading">
-            {/* extra div fixees flexbox vertical centering issue */}
-            <div>
+            {/* extra div fixes flexbox vertical centering issue */}
+            <div className="text">
               <div className="firstRow">
                 <h1>Loading</h1>
                 <img
@@ -109,7 +109,7 @@ const App = () => {
           isOpen={isOpen}
           closeModal={closeModal}
           selectedTrophy={selectedTrophy.trophy}
-          addTrophy={addTrophy}
+          logStudentFinishedReading={logStudentFinishedReading}
         />
       </div>
     </React.StrictMode>

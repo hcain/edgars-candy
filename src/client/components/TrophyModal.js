@@ -5,7 +5,12 @@ import dayjs from 'dayjs';
 import '../scss/trophyModal.scss';
 
 const TrophyModal = (props) => {
-  const { isOpen, closeModal, selectedTrophy, addTrophy } = props;
+  const {
+    isOpen,
+    closeModal,
+    selectedTrophy,
+    logStudentFinishedReading,
+  } = props;
 
   return (
     <>
@@ -34,7 +39,7 @@ const TrophyModal = (props) => {
               <>
                 <p>You have not earned this candy yet.</p>
                 {/* addTrophy makes earned = true and sets current time/date when earned */}
-                <button type="button" onClick={addTrophy}>
+                <button type="button" onClick={logStudentFinishedReading}>
                   Add this candy to your haul!
                 </button>
               </>
@@ -63,6 +68,6 @@ TrophyModal.propTypes = {
     icon: PropTypes.string,
     alt: PropTypes.string,
   }),
-  addTrophy: PropTypes.func.isRequired,
+  logStudentFinishedReading: PropTypes.func.isRequired,
 };
 export default TrophyModal;

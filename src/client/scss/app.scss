@@ -40,12 +40,16 @@ h1 {
 .loading {
   // centers loading vertically (tells it to grow to fit container)
   flex:1 0 auto;
-
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
 
+  // text div fixes flexbox vertical centering issue
+  .text {
+    display: flex;
+    justify-content: center;
+    // wrap text when too narrow
+    flex-wrap: wrap;
+  }
 
   .firstRow {
     display: flex;
