@@ -6,7 +6,7 @@ This is a coding challenge submission for [Readlee](https://www.readlee.com/).
 ### Future Improvements
 In a real-world setting, I would use redux to maintain the state of the user. As more properties of the user would need to be updated, it would become unweildy to manage the state only through react hooks. 
 
-On a similar note, I would control the loading page through a redux state instead of a ternary operator. (To view the loading page, simply alter the url in the axios call while running the app in development, so that the call cannot be completed.)
+On a similar note, I would control the loading page through a redux state instead of a ternary operator. Because the call is only made to a local file, the loading screen flashes only briefly. But in a real call to an external DB, it would display for longer. To view the loading page, simply alter the url in the axios call while running the app in development, so that the call cannot be completed.
 
 Additionally I would redesign the layout of the pop-up on mobile, so that it would better fit the candy icon and continue to look good when narrower than 350px. Currently, the icon disappears when narrower than 420px and the text overhangs the modal around 350px.
 
