@@ -1,11 +1,15 @@
 .header {
   max-width: 600px;
+  // height of trophyList
+  height: 882px;
 
   flex: 1 0 35%;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+
 
   // h1 styling is on app.scss because also used in loading screen
 
@@ -29,6 +33,7 @@
   // STYLING FOR VERTICAL LAYOUT
   @media only screen and (max-width: 896px) {
     max-width: 500px;
+    height: auto;
 
     margin-bottom: 30px;
 

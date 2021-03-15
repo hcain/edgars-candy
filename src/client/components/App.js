@@ -7,6 +7,7 @@ import TrophyList from './TrophyList';
 import Footer from './Footer';
 import TrophyModal from './TrophyModal';
 
+// reset stylesheet helps with uniformity across different browsers
 import '../scss/resetStyles.scss';
 import '../scss/app.scss';
 
@@ -76,37 +77,42 @@ const App = () => {
   };
 
   return (
-    <div className="app">
-      {user ? (
-        <div className="main">
-          <Header user={user} />
-          <TrophyList
-            trophies={user.trophies}
-            isOpen={isOpen}
-            openModal={openModal}
-            closeModal={closeModal}
-          />
-        </div>
-      ) : (
-        <div className="loading">
-          <div className="firstRow">
-            <h1>Loading</h1>
-            <img
-              src={`./svg/${PumpkinLollipop}`}
-              alt="Jack-O'-Lantern filled with candy"
+    <React.StrictMode>
+      <div className="app">
+        {user ? (
+          <div className="main">
+            <Header user={user} />
+            <TrophyList
+              trophies={user.trophies}
+              isOpen={isOpen}
+              openModal={openModal}
+              closeModal={closeModal}
             />
           </div>
-          <h1>please wait!</h1>
-        </div>
-      )}
-      <Footer />
-      <TrophyModal
-        isOpen={isOpen}
-        closeModal={closeModal}
-        selectedTrophy={selectedTrophy.trophy}
-        addTrophy={addTrophy}
-      />
-    </div>
+        ) : (
+          <div className="loading">
+            {/* extra div fixees flexbox vertical centering issue */}
+            <div>
+              <div className="firstRow">
+                <h1>Loading</h1>
+                <img
+                  src={`./svg/${PumpkinLollipop}`}
+                  alt="Jack-O'-Lantern filled with candy"
+                />
+              </div>
+              <h1>please wait!</h1>
+            </div>
+          </div>
+        )}
+        <Footer />
+        <TrophyModal
+          isOpen={isOpen}
+          closeModal={closeModal}
+          selectedTrophy={selectedTrophy.trophy}
+          addTrophy={addTrophy}
+        />
+      </div>
+    </React.StrictMode>
   );
 };
 
