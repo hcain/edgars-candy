@@ -1,5 +1,5 @@
 const express = require('express');
-const users = require('./users.json');
+const users = require('./db/users.json');
 
 const app = express();
 
