@@ -3,8 +3,7 @@ const users = require('./db/users.json');
 
 const app = express();
 
-// vercel ignores express.static
-// app.use(express.static('dist'));
+app.use(express.static('dist'));
 app.get('/api/getUsers', (req, res) => res.send({ users }));
 
 app.listen(process.env.PORT || 8080, () =>
