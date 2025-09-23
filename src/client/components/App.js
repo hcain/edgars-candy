@@ -97,7 +97,8 @@ const App = () => {
                 <h1>Loading</h1>
                 <img
                   src={`./svg/${PumpkinLollipop}`}
-                  alt="Jack-O'-Lantern filled with candy"
+                  // TODO: alt is showing before image finishes loading
+                  // alt="Jack-O'-Lantern filled with candy"
                 />
               </div>
               <h1>please wait!</h1>
