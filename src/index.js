@@ -12,6 +12,6 @@ const app = express();
 app.get('/', (req, res) => res.sendFile('index.html', { root: path.join(__dirname, '../dist') }))
 app.get('/api/getUsers', (req, res) => res.send({ users }));
 
-app.listen(process.env.PORT || 8080, () =>
-  console.log(`Listening on port ${process.env.PORT || 8080}!`)
+app.listen(8080, () =>
+  console.log(`Listening on port 8080!`)
 );
