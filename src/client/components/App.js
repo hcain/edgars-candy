@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import axios from 'axios';
 
-import Header from './Header';
-import TrophyList from './TrophyList';
-import Footer from './Footer';
-import TrophyModal from './TrophyModal';
+import Header from './Header.js';
+import TrophyList from './TrophyList.js';
+import Footer from './Footer.js';
+import TrophyModal from './TrophyModal.js';
 
 // reset stylesheet helps with uniformity across different browsers
 import '../scss/resetStyles.scss';
@@ -96,7 +96,7 @@ const App = () => {
               <div className="firstRow">
                 <h1>Loading</h1>
                 <img
-                  src={`./svg/${PumpkinLollipop}`}
+                  src={`${PumpkinLollipop}`}
                   // TODO: alt is showing before image finishes loading
                   // alt="Jack-O'-Lantern filled with candy"
                 />

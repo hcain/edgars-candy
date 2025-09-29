@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Trophy from './Trophy';
+import Trophy from './Trophy.js';
 import '../scss/trophyList.scss';
 
 const TrophyList = ({ trophies, openModal }) => (

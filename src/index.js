@@ -1,5 +1,5 @@
-const express = require('express');
-const users = require('./db/users.json');
+import express from 'express';
+import users from './db/users.json' with { type: "json" };
 
 const app = express();
 

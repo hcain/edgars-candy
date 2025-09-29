@@ -12,35 +12,35 @@
               "earned": true,
               "date": "2021-03-10T15:31:00Z", 
               "description": "Read 10 stories.",
-              "icon": "001.svg",
+              "icon": "#001",
               "alt": "Two tootsie rolls"
             }, 
             {
               "name": "Copius Candy Corn",
               "earned": false, 
               "description": "Read 20 stories.",
-              "icon": "002.svg",
+              "icon": "#002",
               "alt": "Two scowling candy corns"
             },
             {
               "name":"Oodles of Gummy Worms",
               "earned":false, 
               "description": "Read 30 stories.",
-              "icon": "003.svg",
+              "icon": "#003",
               "alt": "Two rainbow gummy worms"
             }, 
             {
               "name":"Bunch of Butterscotches",
               "earned":false, 
               "description": "Read for a combined total of 1 hour.",
-              "icon": "004.svg",
+              "icon": "#004",
               "alt": "A monster-fanged butterscotch"
             },
             {
               "name":"Plenty of Peppermints", 
               "earned":false, 
               "description": "Read for a combined total of 2 hours.",
-              "icon": "005.svg",
+              "icon": "#005",
               "alt": "One red and one green peppermint"
             }, 
             {
@@ -48,28 +48,28 @@
               "earned":true,
               "date": "2021-03-09T22:11:00Z",
               "description": "Read for over 30 minutes in one session.",
-              "icon": "006.svg",
+              "icon": "#006",
               "alt": "Two snarky hard candies"
             },            
             {
               "name":"Lots of Lollipops",
               "earned":false, 
               "description": "Read for over 45 minutes in one session.",
-              "icon": "007.svg",
+              "icon": "#007",
               "alt": "Two purple and orange twisted lollipops"
             }, 
             {
               "name":"Heaps of Jelly Beans",
               "earned":false, 
               "description": "Read stories from 3 different genres.",
-              "icon": "008.svg",
+              "icon": "#008",
               "alt": "Three colorful striped jelly beans"
             }, 
             {
               "name":"Big Bowlful of Candy",
               "earned":false, 
               "description": "Read 100 pages.",
-              "icon": "009.svg",
+              "icon": "#009",
               "alt": "Candy in a skull-shaped bowl"
             }
           ],

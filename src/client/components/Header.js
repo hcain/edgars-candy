@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import humanizeDuration from 'humanize-duration';
-// for webpack
+
 import PumpkinImage from '../svg/011-candies-2.svg';
 import '../scss/header.scss';
 
@@ -16,7 +16,7 @@ const Header = ({ user }) => (
       </h2>
     </div>
     <img
-      src={`./svg/${PumpkinImage}`}
+      src={`${PumpkinImage}`}
       alt="Jack-O'-Lantern filled with candy"
     />
   </div>
