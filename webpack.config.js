@@ -3,7 +3,7 @@ import { fileURLToPath } from "url";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 
-const outputDirectory = "dist";
+const outputDirectory = "public";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -49,8 +49,8 @@ export default {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: "./public/index.html",
-            favicon: "./public/favicon.ico",
+            template: "./src/client/public/index.html",
+            favicon: "./src/client/public/favicon.ico",
         }),
     ],
 };

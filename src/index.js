@@ -1,5 +1,5 @@
 import express from 'express';
-import users from './src/db/users.json' with { type: "json" };
+import users from './db/users.json' with { type: "json" };
 
 
 const app = express();

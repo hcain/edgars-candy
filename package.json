@@ -6,9 +6,9 @@
   "packageManager": "yarn@4.9.2",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "npm run build && node index.js",
+    "start": "npm run build && node src/index.js",
     "client": "webpack serve --mode development --devtool inline-source-map --hot",
-    "server": "nodemon index.js",
+    "server": "nodemon src/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Hannah Cain",
