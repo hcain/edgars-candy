@@ -1,4 +1,4 @@
 {
-    "framework": "express",
-    "buildCommand": "yarn build"
+    "buildCommand": "yarn build",
+     "framework": "express"
 }
