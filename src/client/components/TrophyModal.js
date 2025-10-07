@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import dayjs from 'dayjs';
+
+import sprite from "../svg/sprite.svg";
 import '../scss/trophyModal.scss';
 
 const TrophyModal = (props) => {
@@ -22,7 +24,10 @@ const TrophyModal = (props) => {
           className="modal"
           overlayClassName="overlay"
         >
-          <img src={`./svg/${selectedTrophy.icon}`} alt={selectedTrophy.alt} />
+          <svg role="img">
+            <title>{selectedTrophy.alt}</title>
+            <use href={`${sprite}${selectedTrophy.icon}`}></use>
+          </svg>
           <div className="text">
             <h2>{selectedTrophy.name}</h2>
             <p className="description">{selectedTrophy.description}</p>
