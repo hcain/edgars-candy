@@ -12,6 +12,8 @@ Additionally I would redesign the layout of the pop-up on mobile, so that it wou
 
 I would also consider adding this confetti animation ([https://www.npmjs.com/package/canvas-confetti](https://www.npmjs.com/package/canvas-confetti)) to the modal overlay when the logStudentFinishedReading button is clicked, to awknowledge and celebrate the user's achievement.
 
+Amended 10/7/25: This project was built before I started regularly using Typescript. If I were building it now, it would be in Typescript.
+
 ### Firestore
 Because my current database is just a simple JSON file, it would convert to a Firestore, NoSQL DB, fairly easily. I would use a collection of user documents, with each user containing a subcollection of trophy documents. Instead of loading the JSON file, express would query and retrieve the specific user from Firestore on the first load of the app.
 
@@ -36,6 +38,13 @@ npm run build
 # Start production server
 npm start
 ```
+
+## Production on Vercel
+Because vercel ignores 'express.static()', the server file (src/index.js) needs to use res.sendFile instead. Before deploying to vercel, make the following changes:
+1. Comment out line 13 in src/index.js ()
+> app.use(express.static('public'));
+2. Uncomment out line 16 in src/index.js
+> app.get('/', (req, res) => res.sendFile(path.resolve(__dirname, '../public/index.html')));
 
 ### Built with
 
